@@ -14,7 +14,7 @@ const stylesHandler = isProduction
 
 const config = {
   entry: "./src/index.ts",
-  devtool: "source-map",
+  // devtool: "source-map",
   output: {
     path: path.resolve(__dirname, "dist"),
   },
@@ -26,7 +26,7 @@ const config = {
     new HtmlWebpackPlugin({
       template: "index.html",
       //   filename: "[hash]_[name].html",
-      // minify: false,
+      minify: false,
     }),
     // копируем файлы из какойто папки и кадаем в дист с названием to
     new CopyPlugin({
@@ -57,7 +57,7 @@ const config = {
               modules: {
                 exportLocalsConvention: "camelCase",
               },
-              sourceMap: true,
+              // sourceMap: true,
             },
           },
         ],
